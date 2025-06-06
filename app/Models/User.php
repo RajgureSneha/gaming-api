@@ -41,4 +41,10 @@ class User extends Authenticatable implements JWTSubject
             'password' => 'hashed',
         ];
     }
+
+    
+    public function scores()
+    {
+        return $this->hasMany(\App\Models\Score::class);
+    }
 }
